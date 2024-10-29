@@ -1,0 +1,17 @@
+services:
+    bot:
+        image: aquova/governor:latest
+        restart: unless-stopped
+        container_name: governor
+        volumes:
+            - ./private:/governor/private
+    web:
+        image: aquova/stardew-chat:latest
+        restart: unless-stopped
+        container_name: stardew-chat
+        ports:
+            - 8080:8080
+        volumes:
+            - ./private:/private
+        environment:
+            - SERVER_NAME=:8080

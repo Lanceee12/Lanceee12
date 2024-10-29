@@ -1,0 +1,13 @@
+# Python generated files
+**/__pycache__
+
+# Private files
+**/private
+
+# VSCode files
+*.code-workspace
+**/.devcontainer/*
+
+# Private files
+*.db
+site.conf
